@@ -6,7 +6,6 @@ import Logo from './components/Logo/Logo'
 import SignIn from './components/Signin/SignIn'
 import Register from './components/Register/Register'
 import ImageLinkFrom from './components/ImageLinkFrom/ImageLinkFrom'
-import Rank from './components/Rank/Rank'
 import FaceRecog from './components/FaceRecog/FaceRecog'
 
 import './App.css';
@@ -83,7 +82,7 @@ class App extends React.Component {
          ? <div>
           <Navigation onRouteChange ={this.onRouteChange} />
           <Logo />
-          <Rank />
+         
           <ImageLinkFrom onInputChange={this.onInputChange} onBtnSubmit={this.onBtnSubmit} />
             <FaceRecog box={this.state.box} imageUrl={this.state.imageUrl} />
           </div>
