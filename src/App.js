@@ -1,12 +1,11 @@
 import React from 'react';
 import Particles from 'react-particles-js'
 import Clarifai from 'clarifai'
-import Navigation from './components/Navigation/Navigation'
+// import Navigation from './components/Navigation/Navigation'
 import Logo from './components/Logo/Logo'
 import SignIn from './components/Signin/SignIn'
 import Register from './components/Register/Register'
 import ImageLinkFrom from './components/ImageLinkFrom/ImageLinkFrom'
-import Rank from './components/Rank/Rank'
 import FaceRecog from './components/FaceRecog/FaceRecog'
 
 import './App.css';
@@ -34,7 +33,7 @@ class App extends React.Component {
       input: '',
       imageUrl: '',
       box: {},
-      route: 'signin'
+      route: 'home'
     }
   }
 
@@ -43,6 +42,7 @@ class App extends React.Component {
     const image = document.getElementById('inputimg');
     const width = Number(image.width);
     const height = Number(image.height);
+    
     return {
       leftCol: clarifaiface.left_col * width,
       topRow: clarifaiface.top_row * height,
@@ -81,9 +81,8 @@ class App extends React.Component {
         />
         {this.state.route === 'home'
          ? <div>
-          <Navigation onRouteChange ={this.onRouteChange} />
+          {/* <Navigation onRouteChange ={this.onRouteChange} /> */}
           <Logo />
-          <Rank />
           <ImageLinkFrom onInputChange={this.onInputChange} onBtnSubmit={this.onBtnSubmit} />
             <FaceRecog box={this.state.box} imageUrl={this.state.imageUrl} />
           </div>

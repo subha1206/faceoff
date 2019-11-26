@@ -4,8 +4,8 @@ import './ImageLinkFrom.css'
 const ImageLinkFrom = ({onInputChange, onBtnSubmit}) => {
     return (
         <div>
-            <p className='f3'>
-                {'This App will detect Faces form your Pictures.'}
+            <p className='f2 mt6'>
+                {'This App will detect Face form your Pictures.'}
             </p>
             <div className="center">
                 <div className="form center pa4 br3 shadow-5">
