@@ -65,6 +65,7 @@ class App extends React.Component {
     
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
       .then(response => this.faceBox(this.faceLocation(response)))
+      // .then(res => console.log(res))
       .catch(err => console.log(err))
   }
   
